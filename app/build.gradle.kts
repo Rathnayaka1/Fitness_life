@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.fitness_life"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.fitness_life"
