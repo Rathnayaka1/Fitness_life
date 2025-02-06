@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient_background"
+    android:padding="20dp">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp">
+
+        <!-- Menu Icon (Left) -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@null"
+            android:src="@drawable/line"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Profile Icon (Right) -->
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:src="@drawable/profile"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!-- Header Text -->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Build your body with us"
+        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"/>
+
+    <!-- Center Image -->
+    <ImageView
+        android:id="@+id/main_image"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:src="@drawable/person"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:padding="10dp"/>
+
+    <!-- Buttons Section -->
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <!-- Select Activity Button -->
+
+        <!-- Check Heart Rate Button -->
+        <Button
+            android:id="@+id/activity_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_gradient_button"
+            android:drawableTop="@drawable/activity"
+            android:backgroundTint="@color/bg_gradient_start"
+            android:drawablePadding="15dp"
+            android:gravity="center"
+            android:text="Select Activity"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/heart_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_gradient_button"
+            android:drawableTop="@drawable/heart"
+            android:drawablePadding="15dp"
+            android:text="Check Heart Rate"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <!-- Select Nutrition Button -->
+        <Button
+            android:id="@+id/nutrition_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_gradient_button"
+            android:drawableTop="@drawable/food"
+            android:drawablePadding="15dp"
+            android:text="Select Nutrition"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <!-- Time Schedule Button -->
+        <Button
+            android:id="@+id/schedule_button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_gradient_button"
+            android:drawableTop="@drawable/calendar"
+            android:drawablePadding="15dp"
+            android:text="Time Schedule"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+    </GridLayout>
+
+</LinearLayout>

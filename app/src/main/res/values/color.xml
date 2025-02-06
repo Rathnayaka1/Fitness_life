@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Gradient Colors -->
+    <color name="gradient_start">#FF5733</color>  <!-- Reddish Orange -->
+    <color name="gradient_center">#FF8D1A</color> <!-- Orange -->
+    <color name="gradient_end">#FFC300</color>    <!-- Yellow -->
+
+    <!-- Background Gradient Colors -->
+    <color name="bg_gradient_start">#BAA8C3</color>  <!-- Dark Purple -->
+    <color name="bg_gradient_end">#C75599</color>    <!-- Pinkish Purple -->
+
+    <!-- Button Text and General Colors -->
+    <color name="button_text">#FFFFFF</color>  <!-- White -->
+    <color name="background_dark">#121212</color>  <!-- Dark Mode Background -->
+</resources>
