@@ -4,14 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/line"
-        android:label="Fitness Life"
-        android:roundIcon="@drawable/profile"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Heart Rate Monitor"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness_life">
 
-        <!-- Main Activity -->
-        <activity android:name=".Calorie"
+        <activity
+            android:name=".Heartrate"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,5 +20,4 @@
         </activity>
 
     </application>
-
 </manifest>

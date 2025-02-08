@@ -1,79 +1,41 @@
-package com.example.heartratemonitor;
+package com.example.fitness_life;
 
-import android.hardware.Camera;
 import android.os.Bundle;
-import android.os.Handler;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class Heartrate extends AppCompatActivity {
 
-    private TextView tvBpm, tvMeasuring;
-    private ProgressBar progressCircular;
-    private ImageView btnMeasure;
-
-    private Camera camera;
-    private boolean isMeasuring = false;
-    private int bpm = 0;
-    private int progress = 0;
-    private Handler handler = new Handler();
+    private TextView measuringText;
+    private ImageView fingerprintIcon;
+    private int progress = 25; // Starts at 25%
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_heartrate);
 
-        tvBpm = findViewById(R.id.tvBpm);
-        tvMeasuring = findViewById(R.id.tvMeasuring);
-        progressCircular = findViewById(R.id.progressCircular);
-        btnMeasure = findViewById(R.id.btnMeasure);
+        // Initialize UI components
+        measuringText = findViewById(R.id.measuring_text);
+        fingerprintIcon = findViewById(R.id.fingerprint_icon);
 
-        btnMeasure.setOnClickListener(v -> {
-            if (!isMeasuring) {
-                startMeasurement();
-            }
-        });
+        // Simulate heart rate measurement progress
+        startHeartRateMeasurement();
     }
 
-    private void startMeasurement() {
-        isMeasuring = true;
-        bpm = 0;
-        progress = 0;
-        tvMeasuring.setText("Measuring... (0%)");
-        progressCircular.setProgress(0);
-
-        // Open Camera & Flash
-        camera = Camera.open();
-        Camera.Parameters params = camera.getParameters();
-        params.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-        camera.setParameters(params);
-        camera.startPreview();
-
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (progress < 100) {
-                    progress += 5;
-                    tvMeasuring.setText("Measuring... (" + progress + "%)");
-                    progressCircular.setProgress(progress);
-                    bpm += (60 + (int) (Math.random() * 40)) / 20; // Randomized BPM Calculation
-                    handler.postDelayed(this, 500);
-                } else {
-                    stopMeasurement();
+    private void startHeartRateMeasurement() {
+        new Thread(() -> {
+            while (progress < 100) {
+                try {
+                    Thread.sleep(1000); // Simulate delay
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
+                progress += 25;
+                runOnUiThread(() -> measuringText.setText("Measuring... (" + progress + "%)"));
             }
-        }, 500);
-    }
-
-    private void stopMeasurement() {
-        isMeasuring = false;
-        camera.stopPreview();
-        camera.release();
-        camera = null;
-
-        tvBpm.setText(bpm + " BPM");
-        tvMeasuring.setText("Measurement Complete");
+            runOnUiThread(() -> measuringText.setText("Measurement Complete!"));
+        }).start();
     }
 }
