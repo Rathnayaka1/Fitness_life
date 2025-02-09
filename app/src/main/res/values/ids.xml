@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="cardRunning" type="id" />
+    <item name="cardGym" type="id" />
+    <item name="cardCycling" type="id" />
+    <item name="cardYoga" type="id" />
+</resources>
