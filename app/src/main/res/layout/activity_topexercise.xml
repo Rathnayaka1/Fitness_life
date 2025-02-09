@@ -10,7 +10,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white" />
+        android:background="@color/purple" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="purple" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -118,7 +125,7 @@
             android:background="@drawable/btn_black_rounded"
             android:fontFamily="@font/bungee"
             android:text="Yoga"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorLink="#000000"
             android:textSize="20sp" />
 
@@ -131,7 +138,7 @@
             android:layout_marginTop="50dp"
             android:fontFamily="@font/bungee"
             android:text="Running"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@drawable/btn_black_rounded"/>
 
@@ -143,7 +150,7 @@
             android:layout_marginTop="50dp"
             android:fontFamily="@font/bungee"
             android:text="Cycling"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@drawable/btn_black_rounded"/>
 
@@ -155,7 +162,7 @@
             android:layout_marginTop="50dp"
             android:fontFamily="@font/bungee"
             android:text="Gym"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@drawable/btn_black_rounded"/>
 
@@ -181,7 +188,7 @@
             android:layout_height="66dp"
             android:fontFamily="@font/bungee"
             android:text="Calory Count"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:background="@drawable/btn_black_rounded"
             app:layout_constraintBottom_toBottomOf="parent"
