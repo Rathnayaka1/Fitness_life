@@ -1,35 +1,54 @@
 package com.example.fitness_life;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Dashboard extends AppCompatActivity {
 
-    private Button activityButton, heartButton, nutritionButton, scheduleButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard); // Ensure the XML file is correctly named
+        setContentView(R.layout.activity_dashboard);
 
-        // Initialize buttons
-        activityButton = findViewById(R.id.activity_button);
-        heartButton = findViewById(R.id.heart_button);
-        nutritionButton = findViewById(R.id.nutrition_button);
-        scheduleButton = findViewById(R.id.schedule_button);
+        Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
+        Button button4 = findViewById(R.id.button4);
 
-        // Set Click Listeners
-        activityButton.setOnClickListener(view -> showToast("Activity Selection Clicked"));
-        heartButton.setOnClickListener(view -> showToast("Heart Rate Monitor Clicked"));
-        nutritionButton.setOnClickListener(view -> showToast("Nutrition Selection Clicked"));
-        scheduleButton.setOnClickListener(view -> showToast("Schedule Clicked"));
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
     }
 
-    // Method to display a simple toast message
-    private void showToast(String message) {
-        Toast.makeText(Dashboard.this, message, Toast.LENGTH_SHORT).show();
+    private void openHeartRateActivity() {
+        Intent intent = new Intent(Dashboard.this, HeartRateActivity.class);
+        startActivity(intent);
     }
 }

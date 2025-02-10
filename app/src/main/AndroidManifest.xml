@@ -5,13 +5,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Heart Rate Monitor"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Fitness_life">
+        android:theme="@style/Theme.FitnessLife">
 
+        <!-- Main Activity -->
         <activity
-            android:name=".Heartrate"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,5 +20,11 @@
             </intent-filter>
         </activity>
 
+        <!-- Sign In Activity (Add this) -->
+        <activity
+            android:name=".Sign_In"
+            android:exported="false" />
+
     </application>
+
 </manifest>

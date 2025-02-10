@@ -3,126 +3,134 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/gradient_background"
-    android:padding="20dp">
+    android:background="#E4C2E9">
 
-    <!-- Top Bar -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp">
+        android:layout_height="250dp"
+        android:background="#B32CCA">
 
-        <!-- Menu Icon (Left) -->
-        <ImageButton
-            android:id="@+id/menu_button"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:background="@null"
-            android:src="@drawable/line"
-            android:layout_alignParentStart="true"/>
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="162dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Built your body with us"
+            android:textColor="#070607"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-        <!-- Profile Icon (Right) -->
-        <ImageButton
-            android:id="@+id/profile_button"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@null"
-            android:src="@drawable/profile"
-            android:layout_alignParentEnd="true"/>
+        <ImageView
+            android:layout_width="159dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/font" />
     </RelativeLayout>
 
-    <!-- Header Text -->
     <TextView
-        android:id="@+id/header_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Build your body with us"
-        android:textStyle="italic"
-        android:textSize="25sp"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center"/>
+        android:padding="16dp"
+        android:text="Category"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
 
-    <!-- Center Image -->
-    <ImageView
-        android:id="@+id/main_image"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:src="@drawable/person"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:scaleType="fitCenter"
-        android:padding="10dp"/>
-
-    <!-- Buttons Section -->
-    <GridLayout
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:columnCount="2"
-        android:rowCount="2">
+        android:padding="16dp">
 
-        <!-- Select Activity Button -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <!-- Check Heart Rate Button -->
-        <Button
-            android:id="@+id/activity_button"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_margin="10dp"
-            android:background="@drawable/rounded_gradient_button"
-            android:drawableTop="@drawable/activity"
-            android:backgroundTint="@color/bg_gradient_start"
-            android:drawablePadding="15dp"
-            android:gravity="center"
-            android:text="Select Activity"
-            android:textColor="@android:color/white"
-            android:textSize="18sp" />
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#F6F4F4"
+                android:padding="16dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/activity"/>
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#742183"
+                    android:textColor="#FDF9F9"/>
+            </LinearLayout>
 
-        <Button
-            android:id="@+id/heart_button"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/rounded_gradient_button"
-            android:drawableTop="@drawable/heart"
-            android:drawablePadding="15dp"
-            android:text="Check Heart Rate"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#F6F3F3"
+                android:padding="16dp"
+                android:margin="8dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/food"/>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#9C27B0"
+                    android:textColor="#CAB3B3"/>
+            </LinearLayout>
 
-        <!-- Select Nutrition Button -->
-        <Button
-            android:id="@+id/nutrition_button"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/rounded_gradient_button"
-            android:drawableTop="@drawable/food"
-            android:drawablePadding="15dp"
-            android:text="Select Nutrition"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FDF9F9"
+                android:padding="16dp"
+                android:margin="8dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/food"/>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#C469D3"
+                    android:textColor="#A22424"/>
+            </LinearLayout>
 
-        <!-- Time Schedule Button -->
-        <Button
-            android:id="@+id/schedule_button"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/rounded_gradient_button"
-            android:drawableTop="@drawable/calendar"
-            android:drawablePadding="15dp"
-            android:text="Time Schedule"
-            android:textSize="18sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"/>
-    </GridLayout>
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#FBF9F9"
+                android:padding="16dp"
+                android:margin="8dp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/activity"/>
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
 
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>
