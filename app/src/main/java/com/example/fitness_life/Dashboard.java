@@ -1,35 +1,28 @@
 package com.example.fitness_life;
 
+import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.BackgroundColorSpan;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Dashboard extends AppCompatActivity {
 
-    private Button activityButton, heartButton, nutritionButton, scheduleButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard); // Ensure the XML file is correctly named
+        setContentView(R.layout.activity_dashboard);
 
-        // Initialize buttons
-        activityButton = findViewById(R.id.activity_button);
-        heartButton = findViewById(R.id.heart_button);
-        nutritionButton = findViewById(R.id.nutrition_button);
-        scheduleButton = findViewById(R.id.schedule_button);
+        // Get TextView
+        TextView forYouText = findViewById(R.id.for_you_text);
 
-        // Set Click Listeners
-        activityButton.setOnClickListener(view -> showToast("Activity Selection Clicked"));
-        heartButton.setOnClickListener(view -> showToast("Heart Rate Monitor Clicked"));
-        nutritionButton.setOnClickListener(view -> showToast("Nutrition Selection Clicked"));
-        scheduleButton.setOnClickListener(view -> showToast("Schedule Clicked"));
-    }
+        // Highlight "For You"
+        SpannableString highlightText = new SpannableString("For You");
+        highlightText.setSpan(new BackgroundColorSpan(Color.YELLOW), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
 
-    // Method to display a simple toast message
-    private void showToast(String message) {
-        Toast.makeText(Dashboard.this, message, Toast.LENGTH_SHORT).show();
+        // Set Highlighted Text
+        forYouText.setText(highlightText);
     }
 }
