@@ -1,11 +1,9 @@
 package com.example.fitness_life;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.BackgroundColorSpan;
-import android.widget.TextView;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Dashboard extends AppCompatActivity {
@@ -15,14 +13,42 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        // Get TextView
-        TextView forYouText = findViewById(R.id.for_you_text);
+        Button button1 = findViewById(R.id.button1);
+        Button button2 = findViewById(R.id.button2);
+        Button button3 = findViewById(R.id.button3);
+        Button button4 = findViewById(R.id.button4);
 
-        // Highlight "For You"
-        SpannableString highlightText = new SpannableString("For You");
-        highlightText.setSpan(new BackgroundColorSpan(Color.YELLOW), 0, 7, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
 
-        // Set Highlighted Text
-        forYouText.setText(highlightText);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHeartRateActivity();
+            }
+        });
+    }
+
+    private void openHeartRateActivity() {
+        Intent intent = new Intent(Dashboard.this, HeartRateActivity.class);
+        startActivity(intent);
     }
 }

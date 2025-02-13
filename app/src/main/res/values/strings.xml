@@ -1,10 +1,23 @@
 <resources>
     <string name="app_name">Fitness_life</string>
-    <string name="select_activity">Select Activity</string>
-    <string name="build_your_body_with_us">Build your body with us</string>
-    <string name="check_heart_rate">Check Heart Rate</string>
-    <string name="select_nutrition">Select Nutrition</string>
-    <string name="time_schedule">Time Schedule</string>
-    <string name="todo">TODO</string>
-    <string name="for_you">For You</string>
+    <string name="monday_5_00pm">Monday 5.00PM</string>
+    <string name="running">Running</string>
+    <string name="alarm_alert">Alarm Alert ⏰</string>
+    <string name="calendar">Calendar</string>
+    <string name="gym">Gym</string>
+    <string name="wednesday_6_30am">Wednesday 6.30AM</string>
+    <string name="cycling">Cycling</string>
+    <string name="thursday_5_30pm">Thursday 5.30PM</string>
+    <string name="yoga">Yoga</string>
+    <string name="saturday_4_30am">Saturday 4.30AM</string>
+    <string name="calender">Calendar</string>
+    <string name="Yoga">Yoga</string>
+    <string name="Running">Running</string>
+    <string name="_44_min">44 min</string>
+    <string name="calendar_">Calender</string>
+    <string name="alarm_alert_">Alarm Alert ⏰</string>
+    <string name="gym_">Gym</string>
+    <string name="_55_40_min_1_200_kcal">55:40 min | 1 200 kcal</string>
+    <string name="_59_40_min">59:40 min</string>
+    <string name="_30_min">30 min</string>
 </resources>

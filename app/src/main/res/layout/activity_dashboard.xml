@@ -3,175 +3,132 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#DCB0E4">
+    android:background="#E4C2E9">
 
-    <!-- Top Section -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#B32CCA">
+
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="162dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Built your body with us"
+            android:textColor="#070607"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="159dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/font" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:padding="16dp"
+        android:text="Category"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"/>
 
-        <!-- Background Image with Menu Icon -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="250dp">
-
-            <ImageView
-                android:id="@+id/background_image"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/image1" />
-
-            <ImageView
-                android:id="@+id/menu_icon"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/line"
-                android:layout_margin="16dp"
-                android:layout_alignParentStart="true"/>
-
-        </RelativeLayout>
-
-        <!-- Category and "See More" Text Row -->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:padding="16dp">
-
-            <!-- Category Text ("For You") -->
-            <TextView
-                android:id="@+id/for_you_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="For You"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="#0D010D"
-                android:layout_alignParentStart="true"/>
-
-
-            <!-- "See More" Text -->
-            <TextView
-                android:id="@+id/see_more_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="See More"
-                android:textColor="#CC1637"
-                android:textSize="14sp"
-                android:layout_marginTop="20dp"
-                android:layout_alignParentEnd="true"/>
-        </RelativeLayout>
-
-    </LinearLayout>
-
-
-    <!-- Horizontal Scrollable Card Section -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!-- Card 1 -->
             <LinearLayout
                 android:layout_width="200dp"
                 android:layout_height="300dp"
-                android:background="#EDE6ED"
+                android:background="#F6F4F4"
                 android:padding="16dp"
-                android:layout_margin="8dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/activity" />
-
+                    android:src="@drawable/activity"/>
                 <Button
                     android:id="@+id/button1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select your Activity"
-                    android:backgroundTint="#9C27B0"
-                    android:layout_marginTop="30dp"
-                    android:textColor="#F6F3F6"/>
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#742183"
+                    android:textColor="#FDF9F9"/>
             </LinearLayout>
 
-            <!-- Card 2 -->
             <LinearLayout
                 android:layout_width="200dp"
                 android:layout_height="300dp"
-                android:background="#EDE6ED"
+                android:background="#F6F3F3"
                 android:padding="16dp"
-                android:layout_margin="8dp"
+                android:margin="8dp"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/heartimage"/>
-
+                    android:src="@drawable/food"/>
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Check your heartrate"
                     android:backgroundTint="#9C27B0"
-                    android:layout_marginTop="30dp"
-                    android:textColor="#FFFCFF"/>
+                    android:textColor="#CAB3B3"/>
             </LinearLayout>
 
-            <!-- Card 3 -->
             <LinearLayout
                 android:layout_width="200dp"
                 android:layout_height="300dp"
-                android:background="#EDE6ED"
+                android:background="#FDF9F9"
                 android:padding="16dp"
-                android:layout_margin="8dp"
+                android:margin="8dp"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:src="@drawable/food"/>
-
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select your Nutrition"
-                    android:backgroundTint="#9C27B0"
-                    android:layout_marginTop="30dp"
-                    android:textColor="#F5F3F6"/>
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#C469D3"
+                    android:textColor="#A22424"/>
             </LinearLayout>
 
-            <!-- Card 4 -->
             <LinearLayout
                 android:layout_width="200dp"
                 android:layout_height="300dp"
-                android:background="#EDE6ED"
+                android:background="#FBF9F9"
                 android:padding="16dp"
-                android:layout_margin="8dp"
+                android:margin="8dp"
                 android:orientation="vertical">
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:src="@drawable/calendarimage"/>
-
+                    android:src="@drawable/activity"/>
                 <Button
                     android:id="@+id/button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Time Schedule"
-                    android:backgroundTint="#9C27B0"
-                    android:layout_marginTop="30dp"
-                    android:textColor="#F7F4F8"/>
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#FFFFFF"
+                    android:textColor="#FFFFFF"/>
             </LinearLayout>
 
         </LinearLayout>
