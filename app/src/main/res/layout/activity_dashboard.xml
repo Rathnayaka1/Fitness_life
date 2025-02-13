@@ -77,7 +77,7 @@
                 android:background="#F6F3F3"
                 android:padding="16dp"
                 android:margin="8dp"
-                android:orientation="vertical">
+git                android:orientation="vertical">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"

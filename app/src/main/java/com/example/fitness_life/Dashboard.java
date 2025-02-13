@@ -48,7 +48,7 @@ public class Dashboard extends AppCompatActivity {
     }
 
     private void openHeartRateActivity() {
-        Intent intent = new Intent(Dashboard.this, HeartRateActivity.class);
+        Intent intent = new Intent(Dashboard.this, Heartrate.class);
         startActivity(intent);
     }
 }
