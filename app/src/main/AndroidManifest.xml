@@ -9,22 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessLife">
-
+        <activity
+            android:name=".WellcomeScreen"
+            android:exported="false" />
         <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Sign In Activity (Add this) -->
+        </activity> <!-- Sign In Activity (Add this) -->
         <activity
             android:name=".Sign_In"
             android:exported="false" />
-
     </application>
 
 </manifest>
