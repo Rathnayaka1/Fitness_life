@@ -10,11 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessLife">
         <activity
-            android:name=".WellcomeScreen"
+            android:name=".Age"
             android:exported="false" />
-        <!-- Main Activity -->
         <activity
-            android:name=".MainActivity"
+            android:name=".Nutrition"
+            android:exported="false" />
+        <activity
+            android:name=".WellcomeScreen"
+            android:exported="false" /> <!-- Main Activity -->
+        <activity
+            android:name=".Dashboard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
