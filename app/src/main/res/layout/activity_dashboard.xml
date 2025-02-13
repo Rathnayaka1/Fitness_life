@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DCB0E4">
+
+    <!-- Top Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Background Image with Menu Icon -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/background_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image1" />
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/line"
+                android:layout_margin="16dp"
+                android:layout_alignParentStart="true"/>
+
+        </RelativeLayout>
+
+        <!-- Category and "See More" Text Row -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="16dp">
+
+            <!-- Category Text ("For You") -->
+            <TextView
+                android:id="@+id/for_you_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="For You"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0D010D"
+                android:layout_alignParentStart="true"/>
+
+
+            <!-- "See More" Text -->
+            <TextView
+                android:id="@+id/see_more_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See More"
+                android:textColor="#CC1637"
+                android:textSize="14sp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!-- Horizontal Scrollable Card Section -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Card 1 -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#EDE6ED"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/activity" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your Activity"
+                    android:backgroundTint="#9C27B0"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#F6F3F6"/>
+            </LinearLayout>
+
+            <!-- Card 2 -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#EDE6ED"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/heartimage"/>
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check your heartrate"
+                    android:backgroundTint="#9C27B0"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#FFFCFF"/>
+            </LinearLayout>
+
+            <!-- Card 3 -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#EDE6ED"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/food"/>
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select your Nutrition"
+                    android:backgroundTint="#9C27B0"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#F5F3F6"/>
+            </LinearLayout>
+
+            <!-- Card 4 -->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:background="#EDE6ED"
+                android:padding="16dp"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/calendarimage"/>
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Schedule"
+                    android:backgroundTint="#9C27B0"
+                    android:layout_marginTop="30dp"
+                    android:textColor="#F7F4F8"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

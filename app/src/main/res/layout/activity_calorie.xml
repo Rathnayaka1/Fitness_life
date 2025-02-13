@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#E8C1EF">
+
+    <!-- Top Header (Profile + Menu) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/menu_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/line2"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:id="@+id/profile_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/profile"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!-- Calories Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calories"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#120404"
+        android:layout_marginTop="10dp"/>
+
+    <ImageView
+        android:id="@+id/calories_chart"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/chart"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Workout Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#0F0303"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Workout Items -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <!-- Running -->
+        <LinearLayout
+            android:id="@+id/running_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Running"
+                    android:textColor="#F8F1F1"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="44:13 min  | 8 550 m"
+                    android:textColor="#F8F4F4"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17 March 2025"
+                android:textColor="#FDFBFB"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Gym -->
+        <LinearLayout
+            android:id="@+id/gym_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gym"
+                    android:textColor="#FDF9F9"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="55:40 min  | 1 200 kcal"
+                    android:textColor="#F8F2F2"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16 March 2025"
+                android:textColor="#FFFAFA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Cycling -->
+        <LinearLayout
+            android:id="@+id/cycling_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cycling"
+                    android:textColor="#FAF6F6"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="59:40 min  | 10 355 m"
+                    android:textColor="#F8F4F4"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 March 2025"
+                android:textColor="#FBF6F6"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Yoga -->
+        <LinearLayout
+            android:id="@+id/yoga_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/workout_card"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yoga"
+                    android:textColor="#FAF8F8"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45 min"
+                    android:textColor="#F6F1F1"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14 March 2025"
+                android:textColor="#F6F4F4"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- More Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/more_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="More"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+</LinearLayout>
