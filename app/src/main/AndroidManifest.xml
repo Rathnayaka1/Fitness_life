@@ -12,7 +12,7 @@
 
         <!-- Signup Activity with android:exported attribute -->
         <activity
-            android:name=".SignupActivity"
+            android:name=".Dashboard"
             android:exported="true">  <!-- Added this line -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
