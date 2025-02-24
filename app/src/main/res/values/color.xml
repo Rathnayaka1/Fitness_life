@@ -15,5 +15,12 @@
 
     <color name="bg_gradient_start_bl">#FF6200EE</color>
     <color name="bg_gradient_end_bl">#FF03DAC5</color>
+    <color name="purple">#9C27B0</color>
+    <color name="light_purple">#EED5F2</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#E9D9EB</color>
+
 
 </resources>

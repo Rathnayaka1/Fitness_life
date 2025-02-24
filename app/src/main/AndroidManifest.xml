@@ -9,27 +9,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessLife">
-        <activity
-            android:name=".Age"
-            android:exported="false" />
-        <activity
-            android:name=".Nutrition"
-            android:exported="false" />
+
         <activity
             android:name=".WellcomeScreen"
-            android:exported="false" /> <!-- Main Activity -->
-        <activity
-            android:name=".Dashboard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Sign In Activity (Add this) -->
-        <activity
-            android:name=".Sign_In"
-            android:exported="false" />
+        </activity>
+
+        <!-- Sign In Activity (Add this) -->
+        <activity android:name=".Sign_In" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".Dashboard" />
+        <activity android:name=".TopExercise"/>
+        <activity android:name=".Heartrate"/>
+        <activity android:name=".Nutrition" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Age" />
+        <activity android:name=".Calorie"  />
+
     </application>
 
 </manifest>
